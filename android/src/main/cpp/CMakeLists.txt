@@ -5,7 +5,6 @@ add_library(
     SHARED
     battery_info_android.cpp
 )
-include_directories($ENV{ANDROID_NDK}/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include)
 
 find_library(
     log-lib
