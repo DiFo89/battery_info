@@ -6,6 +6,7 @@ add_library(
     battery_info_android.cpp
 )
 
+
 find_library(
     log-lib
     log

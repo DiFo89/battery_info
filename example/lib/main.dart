@@ -14,13 +14,11 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  late int sumResult;
   late bool sumAsyncResult;
 
   @override
   void initState() {
     super.initState();
-    sumResult = battery_info_ffi.BatteryInfoFfi.batteryLevel;
     sumAsyncResult = battery_info_ffi.BatteryInfoFfi.isCharging;
   }
 
@@ -42,12 +40,7 @@ class _MyAppState extends State<MyApp> {
                   style: textStyle,
                   textAlign: TextAlign.center,
                 ),
-                spacerSmall,
-                Text(
-                  'sum(1, 2) = $sumResult',
-                  style: textStyle,
-                  textAlign: TextAlign.center,
-                ),
+
                 spacerSmall,
                 Text('isCharging: $sumAsyncResult'),
               ],

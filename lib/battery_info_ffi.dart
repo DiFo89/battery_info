@@ -137,7 +137,7 @@ class BatteryInfoFfi {
   static final _native = NativeBatteryInfo();
 
   /// Получает уровень заряда батареи (0-100)
-  static int get batteryLevel => _native.getBatteryLevel();
+  static Future<int> get batteryLevel => _native.getBatteryLevel();
 
   /// Проверяет, заряжается ли устройство
   static bool get isCharging => _native.isCharging();

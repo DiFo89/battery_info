@@ -35,7 +35,7 @@ public class BatteryInfoFfiPlugin implements FlutterPlugin, MethodChannel.Method
         }
         try{
             if (call.method.equals("getBatteryLevel")) {
-                result.success(getBatteryLevel());
+                result.success(getBatteryLevel(context));
             }
             if (call.method.equals("isCharging")) {
                 result.success(isCharging());
@@ -49,8 +49,6 @@ public class BatteryInfoFfiPlugin implements FlutterPlugin, MethodChannel.Method
     }
 
 
-
-    public native int getBatteryLevel();
-
     public native boolean isCharging();
+    public native int getBatteryLevel(Context context);
 }
